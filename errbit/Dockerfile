@@ -13,5 +13,7 @@ RUN chown -R errbit:errbit .
 
 USER errbit
 
+EXPOSE 8080
+
 ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD ["puma", "-C", "config/puma.default.rb"]
