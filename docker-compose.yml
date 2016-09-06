@@ -9,3 +9,10 @@ services:
       - MONGO_URL=mongodb://mongo:27017/errbit
     ports:
       - 3001:8080
+  rails:
+    build:
+      context: rails-app
+    volumes:
+      - ./rails-app:/home/rails/app
+    ports:
+      - 3000:3000
