@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mongo:
+    image: mongo:3.2.9
+  errbit:
+    build:
+      context: errbit
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/errbit
+    ports:
+      - 3001:8080
